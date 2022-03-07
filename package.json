@@ -1,0 +1,19 @@
+{
+  "name": "sql-fullstack-blog",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "concurrently": "^7.0.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "sqlite3": "4.2.0"
+  },
+  "scripts": {
+    "server": "cd server && nodemon server.js",
+    "client": "cd client && yarn start",
+    "dev": "concurrently -n 'server,client' -c 'red,blue' \"yarn server\" \"yarn client\""
+  }
+}
